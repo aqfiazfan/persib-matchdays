@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" width="100%" height="100%">
+  <style>
+    .sticker { fill: #FFFFFF; }
+    .text-label { font-family: 'Arial Black', 'Impact', sans-serif; font-size: 18px; fill: #FFFFFF; text-anchor: middle; font-weight: 900; }
+  </style>
+
+  <g transform="translate(350, 120)">
+    <path class="sticker" d="M 50 15 C 38 15, 30 25, 32 35 C 28 36, 25 40, 25 45 C 25 55, 35 60, 45 60 C 45 62, 48 65, 50 65 C 52 65, 55 62, 55 60 C 65 60, 75 55, 75 45 C 75 40, 72 36, 68 35 C 70 25, 62 15, 50 15 Z" />
+    <circle cx="43" cy="42" r="3.5" fill="#000000" />
+    <circle cx="57" cy="42" r="3.5" fill="#000000" />
+    <path d="M 44 50 Q 50 56, 56 50" stroke="#000000" stroke-width="2.5" fill="none" stroke-linecap="round" />
+    <path class="sticker" d="M 33 67 L 67 67 L 75 85 L 63 88 L 61 75 L 61 115 L 53 115 L 53 138 L 47 138 L 47 115 L 39 115 L 39 75 L 37 88 L 25 85 Z" />
+    <circle class="sticker" cx="21" cy="95" r="10" />
+    <circle cx="21" cy="95" r="8" fill="none" stroke="#000000" stroke-width="1.5" />
+    <text x="50" y="160" class="text-label">PAPA</text>
+  </g>
+
+  <g transform="translate(500, 120)">
+    <path class="sticker" d="M 50 10 C 25 10, 22 35, 22 55 C 22 75, 32 90, 50 90 C 68 90, 78 75, 78 55 C 78 35, 75 10, 50 10 Z" />
+    <ellipse cx="50" cy="48" rx="18" ry="22" fill="#000000" />
+    <circle cx="44" cy="45" r="3" fill="#FFFFFF" />
+    <circle cx="56" cy="45" r="3" fill="#FFFFFF" />
+    <path d="M 44 55 Q 50 60, 56 55" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round" />
+    <path class="sticker" d="M 30 90 L 70 90 L 75 140 L 25 140 Z" />
+    <path class="sticker" d="M 32 82 Q 50 95, 68 82 L 72 115 L 64 115 L 62 90 Q 50 100, 38 90 L 36 115 L 28 115 Z" />
+    <path class="sticker" d="M 75 80 L 95 80 L 95 65 L 75 65 Z M 74 60 L 75 105 L 73 105 L 72 60 Z" />
+    <text x="50" y="160" class="text-label">MAMA</text>
+  </g>
+
+  <g transform="translate(680, 110)">
+    <path class="sticker" d="M 50 20 C 42 20, 38 25, 38 32 C 38 40, 42 45, 50 45 C 58 45, 62 40, 62 32 C 62 25, 58 20, 50 20 Z" />
+    <path class="sticker" d="M 40 25 C 32 28, 30 45, 32 55 C 35 50, 38 45, 40 45 Z" />
+    <path class="sticker" d="M 60 25 C 68 28, 70 45, 68 55 C 65 50, 62 45, 60 45 Z" />
+    <circle cx="46" cy="32" r="2" fill="#000000" />
+    <circle cx="54" cy="32" r="2" fill="#000000" />
+    <path d="M 46 38 Q 50 42, 54 38" stroke="#000000" stroke-width="1.5" fill="none" stroke-linecap="round" />
+    <path class="sticker" d="M 42 48 L 58 48 L 63 70 L 58 70 C 58 60, 42 60, 42 70 L 37 70 Z" />
+    <path class="sticker" d="M 45 68 C 45 90, 85 85, 85 105 C 85 125, 25 125, 25 100 C 25 88, 38 85, 42 80 Z" />
+    <circle class="sticker" cx="22" cy="65" r="7" />
+    <text x="52" y="170" class="text-label">KHODAM PAPA</text>
+  </g>
+
+  <g transform="translate(200, 380)">
+    <path class="sticker" d="M 50 20 C 38 20, 35 28, 35 35 C 35 48, 42 52, 50 52 C 58 52, 65 48, 65 35 C 65 28, 62 20, 50 20 Z" />
+    <path class="sticker" d="M 32 32 C 30 35, 30 42, 33 45 Z M 68 32 C 70 35, 70 42, 67 45 Z" />
+    <circle cx="44" cy="35" r="2" fill="#000000" />
+    <circle cx="56" cy="35" r="2" fill="#000000" />
+    <path d="M 42 27 Q 45 25, 47 27 M 53 27 Q 55 25, 58 27" stroke="#000000" stroke-width="1.5" fill="none" />
+    <path d="M 45 44 Q 50 48, 55 44" stroke="#000000" stroke-width="2" fill="none" />
+    <path class="sticker" d="M 38 52 L 62 52 L 65 95 L 54 95 L 56 130 L 46 130 L 44 95 L 35 95 Z" />
+    <rect class="sticker" x="65" y="55" width="25" height="18" rx="2" />
+    <rect x="68" y="58" width="19" height="12" fill="#000000" />
+    <text x="50" y="160" class="text-label">KAKEK</text>
+  </g>
+
+  <g transform="translate(380, 380)">
+    <path class="sticker" d="M 50 15 C 28 15, 25 35, 25 55 C 25 75, 32 85, 50 85 C 68 85, 75 75, 75 55 C 75 35, 72 15, 50 15 Z" />
+    <ellipse cx="50" cy="48" rx="16" ry="18" fill="#000000" />
+    <circle cx="45" cy="45" r="2" fill="#FFFFFF" />
+    <circle cx="55" cy="45" r="2" fill="#FFFFFF" />
+    <path d="M 45 54 Q 50 58, 55 54" stroke="#FFFFFF" stroke-width="2" fill="none" />
+    <path d="M 44 35 Q 50 37, 56 35" stroke="#FFFFFF" stroke-width="1" fill="none" />
+    <path class="sticker" d="M 28 85 L 72 85 L 75 135 L 25 135 Z" />
+    <path class="sticker" d="M 73 95 L 77 95 L 77 135 L 73 135 Z" />
+    <circle class="sticker" cx="75" cy="90" r="7" />
+    <text x="50" y="160" class="text-label">NENEK</text>
+  </g>
+
+  <g transform="translate(560, 380)">
+    <path class="sticker" d="M 50 20 C 25 20, 20 35, 20 55 C 20 75, 30 85, 50 85 C 70 85, 80 75, 80 55 C 80 35, 75 20, 50 20 Z" />
+    <circle class="sticker" cx="23" cy="25" r="10" />
+    <circle class="sticker" cx="77" cy="25" r="10" />
+    <circle cx="38" cy="48" r="4.5" fill="#000000" />
+    <circle cx="62" cy="48" r="4.5" fill="#000000" />
+    <polygon points="46,56 54,56 50,61" fill="#000000" />
+    <path d="M 20 45 L 30 48 M 20 55 L 28 56 M 80 45 L 70 48 M 80 55 L 72 56" stroke="#000000" stroke-width="3" stroke-linecap="round" />
+    <path class="sticker" d="M 25 83 L 75 83 L 80 130 C 80 135, 20 135, 20 130 Z" />
+    <rect class="sticker" x="32" y="115" width="12" height="20" rx="4" />
+    <rect class="sticker" x="56" y="115" width="12" height="20" rx="4" />
+    <path class="sticker" d="M 75 110 C 95 110, 95 80, 90 70 C 85 75, 88 95, 75 98 Z" />
+    <text x="50" y="160" class="text-label">MAUNG (Kakek)</text>
+  </g>
+
+  <g transform="translate(100, 680)">
+    <path class="sticker" d="M 20 120 Q 50 135, 80 120 L 75 115 Q 50 128, 25 115 Z" />
+    <path class="sticker" d="M 30 75 L 35 118 M 65 75 L 60 118" stroke="#FFFFFF" stroke-width="4" />
+    <path class="sticker" d="M 35 50 C 25 50, 25 70, 25 90 L 65 90 C 65 70, 60 50, 45 50 Z" />
+    <path class="sticker" d="M 25 40 L 65 40 L 45 20 Z" />
+    <circle class="sticker" cx="45" cy="42" r="10" />
+    <path d="M 39 42 Q 41 45, 43 42 M 47 42 Q 49 45, 51 42" stroke="#000000" stroke-width="1.5" fill="none" />
+    <text x="45" y="155" class="text-label">BUYUT</text>
+  </g>
+
+  <g transform="translate(260, 680)">
+    <circle class="sticker" cx="50" cy="35" r="15" />
+    <path class="sticker" d="M 32 30 L 68 30 L 72 24 L 28 24 Z" /> <circle cx="44" cy="36" r="2.5" fill="#000000" />
+    <circle cx="56" cy="36" r="2.5" fill="#000000" />
+    <path d="M 44 44 Q 50 49, 56 44" stroke="#000000" stroke-width="2" fill="none" />
+    <path class="sticker" d="M 35 55 L 65 55 L 68 95 L 60 95 L 60 125 L 52 125 L 50 98 L 48 98 L 40 125 L 32 125 L 32 95 L 35 95 Z" />
+    <rect class="sticker" x="65" y="85" width="20" height="15" rx="2" />
+    <path class="sticker" d="M 70 85 L 70 80 L 80 80 L 80 85" fill="none" stroke="#FFFFFF" stroke-width="2" />
+    <text x="50" y="155" class="text-label">PAMAn</text>
+  </g>
+
+  <g transform="translate(410, 680)">
+    <path class="sticker" d="M 50 18 C 35 18, 30 25, 30 35 C 30 50, 70 50, 70 35 C 70 25, 65 18, 50 18 Z" />
+    <circle cx="43" cy="36" r="2.5" fill="#000000" />
+    <circle cx="57" cy="36" r="2.5" fill="#000000" />
+    <path d="M 45 43 Q 50 47, 55 43" stroke="#000000" stroke-width="2" fill="none" />
+    <path class="sticker" d="M 36 55 L 64 55 L 70 95 L 30 95 Z M 38 95 L 62 95 L 62 125 L 38 125 Z" />
+    <path class="sticker" d="M 70 65 L 78 50 L 84 55 L 82 75 L 70 75 Z" />
+    <text x="50" y="155" class="text-label">BIBI</text>
+  </g>
+
+  <g transform="translate(560, 680)">
+    <path class="sticker" d="M 50 18 C 30 18, 28 35, 28 52 C 28 70, 35 80, 50 80 C 65 80, 72 70, 72 52 C 72 35, 70 18, 50 18 Z" />
+    <ellipse cx="50" cy="46" rx="14" ry="16" fill="#000000" />
+    <circle cx="45" cy="44" r="2.5" fill="#FFFFFF" />
+    <circle cx="55" cy="44" r="2.5" fill="#FFFFFF" />
+    <path d="M 45 51 Q 50 55, 55 51" stroke="#FFFFFF" stroke-width="2" fill="none" />
+    <path class="sticker" d="M 32 80 L 68 80 L 70 110 L 30 110 Z M 34 110 L 66 110 L 66 130 L 34 130 Z" />
+    <rect class="sticker" x="72" y="65" width="10" height="18" rx="2" />
+    <circle cx="77" cy="80" r="1" fill="#000000" />
+    <text x="50" y="155" class="text-label">KAKAK</text>
+  </g>
+
+  <g transform="translate(710, 700)">
+    <circle class="sticker" cx="40" cy="30" r="14" />
+    <path class="sticker" d="M 26 26 Q 35 15, 54 26 L 50 18 Q 38 10, 28 18 Z" />
+    <circle cx="34" cy="30" r="2" fill="#000000" />
+    <circle cx="46" cy="30" r="2" fill="#000000" />
+    <path d="M 35 36 Q 40 40, 45 36" stroke="#000000" stroke-width="1.8" fill="none" />
+    <path class="sticker" d="M 28 44 L 55 44 L 65 75 L 55 75 L 50 58 L 30 58 L 22 75 L 12 75 Z" />
+    <circle class="sticker" cx="68" cy="72" r="8" />
+    <text x="40" y="135" class="text-label">ADIK</text>
+  </g>
+
+  <g transform="translate(850, 680)">
+    <circle class="sticker" cx="50" cy="32" r="14" />
+    <path class="sticker" d="M 32 25 L 68 25 L 75 29 L 25 29 Z" />
+    <circle cx="44" cy="34" r="2.5" fill="#000000" />
+    <circle cx="56" cy="34" r="2.5" fill="#000000" />
+    <path d="M 44 41 Q 50 46, 56 41" stroke="#000000" stroke-width="2" fill="none" />
+    <path class="sticker" d="M 35 52 L 65 52 L 68 92 L 60 92 L 60 125 L 52 125 L 50 95 L 48 95 L 40 125 L 32 125 L 32 92 L 35 92 Z" />
+    <polygon class="sticker" points="15,70 30,70 22.5,95" />
+    <path class="sticker" d="M 13 65 L 13 95 L 15 95 L 15 65 Z" />
+    <text x="50" y="155" class="text-label">AA</text>
+  </g>
+</svg>

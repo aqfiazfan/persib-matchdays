@@ -1,0 +1,6 @@
+*.pdf
+.test
+__pycache__/
+*.py
+rsssf_url_inventory.json
+rsssf_persib_scraper.py

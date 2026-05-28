@@ -1,0 +1,890 @@
+{
+  "meta": {
+    "note": "Daftar pencetak gol Persib digabung dari tiga sumber: (1) Wikipedia season pages untuk musim 2021/22 sampai 2025/26 — paling akurat; (2) Parsing teks goalscorer RSSSF untuk pertandingan 1950-2010 — coverage hanya ~27%; (3) Catatan kurasi manual untuk legenda yang RSSSF undercount (Sutiono Lamso, Adjat Sudradjat, Atep, dll).",
+    "sources": {
+      "wikipedia": "https://en.wikipedia.org/wiki/2024%E2%80%9325_Persib_Bandung_season (& pages for 2022-23, 2025-26)",
+      "rsssf": "https://www.rsssf.org/tablesi/indo*.html"
+    },
+    "limitations": "Era ISL 2011-2020 punya gap data besar — pemain seperti Atep, Tantan, Konate, Ferdinand Sinaga, Sergio van Dijk, Vladimir Vujović tidak tercakup data goalscorer yang dapat di-verifikasi otomatis. Untuk perbandingan all-time yang akurat, rujuk arsip Pikiran Rakyat atau buku statistik resmi PSSI."
+  },
+  "combined_top_scorers": [
+    {
+      "name": "David da Silva",
+      "goals": 74,
+      "appearances": 107,
+      "year_span": "2021–25",
+      "seasons_at_persib": 4,
+      "source": "wikipedia",
+      "notes": "2023-24: Top scorer Liga 1 2023/24; 2022-23: Top scorer Persib (Wikipedia); 2021-22: debut season, partial",
+      "era": "modern (Wikipedia)"
+    },
+    {
+      "name": "Atep",
+      "goals": 60,
+      "year_span": "2012–2018",
+      "source": "curated_estimate",
+      "notes": "Kapten Persib juara ISL 2014. Coverage RSSSF nol untuk era ini.",
+      "era": "legend (curated estimate)",
+      "is_estimate": true
+    },
+    {
+      "name": "Adjat Sudradjat",
+      "goals": 50,
+      "year_span": "1983–1990",
+      "source": "curated_estimate",
+      "notes": "Legenda Perserikatan 1986 & 1990. RSSSF catat 19 gol dari final-final besar; karir totalnya jauh lebih tinggi karena banyak pertandingan regional tidak tercatat.",
+      "era": "legend (curated estimate)",
+      "is_estimate": true
+    },
+    {
+      "name": "Tantan",
+      "goals": 50,
+      "year_span": "2008–2020",
+      "source": "curated_estimate",
+      "notes": "Veteran winger Persib, pencetak gol sayap kanan. Coverage RSSSF nol untuk era ini.",
+      "era": "legend (curated estimate)",
+      "is_estimate": true
+    },
+    {
+      "name": "Sutiono Lamso",
+      "goals": 40,
+      "year_span": "1991–1998",
+      "source": "curated_estimate",
+      "notes": "Captain Persib 1994/95 juara Liga Indonesia. RSSSF hanya catat 4 gol; jumlah karir aktual jauh lebih tinggi karena tidak semua match Liga Indonesia awal punya data goalscorer.",
+      "era": "legend (curated estimate)",
+      "is_estimate": true
+    },
+    {
+      "name": "Tyronne del Pino",
+      "goals": 27,
+      "appearances": 56,
+      "year_span": "2023–25",
+      "seasons_at_persib": 2,
+      "source": "wikipedia",
+      "notes": "2023-24: estimated, joined Jan 2024",
+      "era": "modern (Wikipedia)"
+    },
+    {
+      "name": "Ciro Alves",
+      "goals": 26,
+      "appearances": 100,
+      "year_span": "2022–25",
+      "seasons_at_persib": 3,
+      "source": "wikipedia",
+      "notes": "2023-24: estimated; 2022-23: estimated",
+      "era": "modern (Wikipedia)"
+    },
+    {
+      "name": "Robby Darwis",
+      "goals": 25,
+      "year_span": "1980–2000",
+      "source": "curated_estimate",
+      "notes": "Defender-tengah legendaris, kapten 1990s; 5 gol di RSSSF, sebagian besar dari laga final besar. Lebih dikenal sebagai bek, tapi cetak gol penting.",
+      "era": "legend (curated estimate)",
+      "is_estimate": true
+    },
+    {
+      "name": "Hilton Mauro Moreira",
+      "goals": 21,
+      "appearances": 18,
+      "year_span": "2008–2010",
+      "seasons_at_persib": 2,
+      "source": "rsssf",
+      "favorite_opponent": "Persik (4 gol)",
+      "era": "historical (RSSSF, partial)"
+    },
+    {
+      "name": "Ezra Walian",
+      "goals": 17,
+      "appearances": 76,
+      "year_span": "2021–24",
+      "seasons_at_persib": 3,
+      "source": "wikipedia",
+      "notes": "2023-24: estimated; 2022-23: estimated; 2021-22: estimated",
+      "era": "modern (Wikipedia)"
+    },
+    {
+      "name": "Alejandro Tobar",
+      "goals": 14,
+      "appearances": 10,
+      "year_span": "2003–2006",
+      "seasons_at_persib": 3,
+      "source": "rsssf",
+      "favorite_opponent": "Perseden (3 gol)",
+      "era": "historical (RSSSF, partial)"
+    },
+    {
+      "name": "Andrew Jung",
+      "goals": 13,
+      "appearances": 23,
+      "year_span": "2025–26",
+      "seasons_at_persib": 1,
+      "source": "wikipedia",
+      "notes": "",
+      "era": "modern (Wikipedia)"
+    },
+    {
+      "name": "Sujana",
+      "goals": 13,
+      "appearances": 11,
+      "year_span": "2001–2002",
+      "seasons_at_persib": 2,
+      "source": "rsssf",
+      "favorite_opponent": "PSBL (3 gol)",
+      "era": "historical (RSSSF, partial)"
+    },
+    {
+      "name": "Omo",
+      "goals": 13,
+      "appearances": 9,
+      "year_span": "1957–1959",
+      "seasons_at_persib": 3,
+      "source": "rsssf",
+      "favorite_opponent": "Persema (3 gol)",
+      "era": "historical (RSSSF, partial)"
+    },
+    {
+      "name": "Imral Usman",
+      "goals": 12,
+      "appearances": 10,
+      "year_span": "2003–2005",
+      "seasons_at_persib": 3,
+      "source": "rsssf",
+      "favorite_opponent": "Semen (3 gol)",
+      "era": "historical (RSSSF, partial)"
+    },
+    {
+      "name": "Ekene Ikenwa",
+      "goals": 12,
+      "appearances": 4,
+      "year_span": "2005",
+      "seasons_at_persib": 1,
+      "source": "rsssf",
+      "favorite_opponent": "PSDS (4 gol)",
+      "era": "historical (RSSSF, partial)"
+    },
+    {
+      "name": "Uilliam Barros",
+      "goals": 11,
+      "appearances": 31,
+      "year_span": "2025–26",
+      "seasons_at_persib": 1,
+      "source": "wikipedia",
+      "notes": "",
+      "era": "modern (Wikipedia)"
+    },
+    {
+      "name": "Yaris Riyadi",
+      "goals": 11,
+      "appearances": 10,
+      "year_span": "2001–2005",
+      "seasons_at_persib": 3,
+      "source": "rsssf",
+      "favorite_opponent": "Persita (2 gol)",
+      "era": "historical (RSSSF, partial)"
+    },
+    {
+      "name": "Cristian Gerard Alfaro Gonzales",
+      "goals": 10,
+      "appearances": 8,
+      "year_span": "2008–2010",
+      "seasons_at_persib": 2,
+      "source": "rsssf",
+      "favorite_opponent": "Persiba (2 gol)",
+      "era": "historical (RSSSF, partial)"
+    },
+    {
+      "name": "Beckham Putra",
+      "goals": 9,
+      "appearances": 90,
+      "year_span": "2023–26",
+      "seasons_at_persib": 3,
+      "source": "wikipedia",
+      "notes": "2023-24: estimated",
+      "era": "modern (Wikipedia)"
+    },
+    {
+      "name": "Marc Klok",
+      "goals": 8,
+      "appearances": 94,
+      "year_span": "2022–25",
+      "seasons_at_persib": 3,
+      "source": "wikipedia",
+      "notes": "2023-24: estimated; 2022-23: estimated",
+      "era": "modern (Wikipedia)"
+    },
+    {
+      "name": "Boy Jati Asmara",
+      "goals": 8,
+      "appearances": 7,
+      "year_span": "2005",
+      "seasons_at_persib": 1,
+      "source": "rsssf",
+      "favorite_opponent": "Sriwijaya FC (2 gol)",
+      "era": "historical (RSSSF, partial)"
+    },
+    {
+      "name": "Witarsa",
+      "goals": 8,
+      "appearances": 7,
+      "year_span": "1951–1957",
+      "seasons_at_persib": 4,
+      "source": "rsssf",
+      "favorite_opponent": "Persidja Djakarta (2 gol)",
+      "era": "historical (RSSSF, partial)"
+    },
+    {
+      "name": "Wowo",
+      "goals": 8,
+      "appearances": 4,
+      "year_span": "1959",
+      "seasons_at_persib": 1,
+      "source": "rsssf",
+      "favorite_opponent": "Persema (2 gol)",
+      "era": "historical (RSSSF, partial)"
+    },
+    {
+      "name": "Adrian Colombo",
+      "goals": 7,
+      "appearances": 6,
+      "year_span": "2004–2006",
+      "seasons_at_persib": 2,
+      "source": "rsssf",
+      "favorite_opponent": "Persita (2 gol)",
+      "era": "historical (RSSSF, partial)"
+    },
+    {
+      "name": "Rafael Alves Bastos",
+      "goals": 7,
+      "appearances": 6,
+      "year_span": "2008",
+      "seasons_at_persib": 1,
+      "source": "rsssf",
+      "favorite_opponent": "Persik (2 gol)",
+      "era": "historical (RSSSF, partial)"
+    },
+    {
+      "name": "Tanu",
+      "goals": 7,
+      "appearances": 3,
+      "year_span": "1951–1952",
+      "seasons_at_persib": 2,
+      "source": "rsssf",
+      "favorite_opponent": "PSMS Medan (4 gol)",
+      "era": "historical (RSSSF, partial)"
+    },
+    {
+      "name": "Ramon Tanque",
+      "goals": 6,
+      "appearances": 25,
+      "year_span": "2025–26",
+      "seasons_at_persib": 1,
+      "source": "wikipedia",
+      "notes": "",
+      "era": "modern (Wikipedia)"
+    },
+    {
+      "name": "Bruno Cantanhede",
+      "goals": 6,
+      "appearances": 24,
+      "year_span": "2021–22",
+      "seasons_at_persib": 1,
+      "source": "wikipedia",
+      "notes": "2021-22: estimated",
+      "era": "modern (Wikipedia)"
+    },
+    {
+      "name": "Asep Dayat",
+      "goals": 6,
+      "appearances": 6,
+      "year_span": "2002–2004",
+      "seasons_at_persib": 3,
+      "source": "rsssf",
+      "favorite_opponent": "PSMS (2 gol)",
+      "era": "historical (RSSSF, partial)"
+    }
+  ],
+  "modern_era_2021_2026": [
+    {
+      "name": "David da Silva",
+      "goals": 74,
+      "appearances": 107,
+      "year_span": "2021–25",
+      "seasons_at_persib": 4,
+      "source": "wikipedia",
+      "notes": "2023-24: Top scorer Liga 1 2023/24; 2022-23: Top scorer Persib (Wikipedia); 2021-22: debut season, partial",
+      "era": "modern (Wikipedia)"
+    },
+    {
+      "name": "Tyronne del Pino",
+      "goals": 27,
+      "appearances": 56,
+      "year_span": "2023–25",
+      "seasons_at_persib": 2,
+      "source": "wikipedia",
+      "notes": "2023-24: estimated, joined Jan 2024",
+      "era": "modern (Wikipedia)"
+    },
+    {
+      "name": "Ciro Alves",
+      "goals": 26,
+      "appearances": 100,
+      "year_span": "2022–25",
+      "seasons_at_persib": 3,
+      "source": "wikipedia",
+      "notes": "2023-24: estimated; 2022-23: estimated",
+      "era": "modern (Wikipedia)"
+    },
+    {
+      "name": "Ezra Walian",
+      "goals": 17,
+      "appearances": 76,
+      "year_span": "2021–24",
+      "seasons_at_persib": 3,
+      "source": "wikipedia",
+      "notes": "2023-24: estimated; 2022-23: estimated; 2021-22: estimated",
+      "era": "modern (Wikipedia)"
+    },
+    {
+      "name": "Andrew Jung",
+      "goals": 13,
+      "appearances": 23,
+      "year_span": "2025–26",
+      "seasons_at_persib": 1,
+      "source": "wikipedia",
+      "notes": "",
+      "era": "modern (Wikipedia)"
+    },
+    {
+      "name": "Uilliam Barros",
+      "goals": 11,
+      "appearances": 31,
+      "year_span": "2025–26",
+      "seasons_at_persib": 1,
+      "source": "wikipedia",
+      "notes": "",
+      "era": "modern (Wikipedia)"
+    },
+    {
+      "name": "Beckham Putra",
+      "goals": 9,
+      "appearances": 90,
+      "year_span": "2023–26",
+      "seasons_at_persib": 3,
+      "source": "wikipedia",
+      "notes": "2023-24: estimated",
+      "era": "modern (Wikipedia)"
+    },
+    {
+      "name": "Marc Klok",
+      "goals": 8,
+      "appearances": 94,
+      "year_span": "2022–25",
+      "seasons_at_persib": 3,
+      "source": "wikipedia",
+      "notes": "2023-24: estimated; 2022-23: estimated",
+      "era": "modern (Wikipedia)"
+    },
+    {
+      "name": "Ramon Tanque",
+      "goals": 6,
+      "appearances": 25,
+      "year_span": "2025–26",
+      "seasons_at_persib": 1,
+      "source": "wikipedia",
+      "notes": "",
+      "era": "modern (Wikipedia)"
+    },
+    {
+      "name": "Bruno Cantanhede",
+      "goals": 6,
+      "appearances": 24,
+      "year_span": "2021–22",
+      "seasons_at_persib": 1,
+      "source": "wikipedia",
+      "notes": "2021-22: estimated",
+      "era": "modern (Wikipedia)"
+    },
+    {
+      "name": "Adam Alis",
+      "goals": 5,
+      "appearances": 60,
+      "year_span": "2024–26",
+      "seasons_at_persib": 2,
+      "source": "wikipedia",
+      "notes": "",
+      "era": "modern (Wikipedia)"
+    },
+    {
+      "name": "Gustavo França",
+      "goals": 5,
+      "appearances": 35,
+      "year_span": "2024–25",
+      "seasons_at_persib": 1,
+      "source": "wikipedia",
+      "notes": "",
+      "era": "modern (Wikipedia)"
+    },
+    {
+      "name": "Saddil Ramdani",
+      "goals": 4,
+      "appearances": 23,
+      "year_span": "2025–26",
+      "seasons_at_persib": 1,
+      "source": "wikipedia",
+      "notes": "",
+      "era": "modern (Wikipedia)"
+    },
+    {
+      "name": "Ricky Kambuaya",
+      "goals": 4,
+      "appearances": 25,
+      "year_span": "2022–23",
+      "seasons_at_persib": 1,
+      "source": "wikipedia",
+      "notes": "2022-23: estimated",
+      "era": "modern (Wikipedia)"
+    },
+    {
+      "name": "Federico Barba",
+      "goals": 3,
+      "appearances": 23,
+      "year_span": "2025–26",
+      "seasons_at_persib": 1,
+      "source": "wikipedia",
+      "notes": "",
+      "era": "modern (Wikipedia)"
+    },
+    {
+      "name": "Luciano Guaycochea",
+      "goals": 3,
+      "appearances": 25,
+      "year_span": "2025–26",
+      "seasons_at_persib": 1,
+      "source": "wikipedia",
+      "notes": "",
+      "era": "modern (Wikipedia)"
+    },
+    {
+      "name": "Frans Putros",
+      "goals": 3,
+      "appearances": 25,
+      "year_span": "2025–26",
+      "seasons_at_persib": 1,
+      "source": "wikipedia",
+      "notes": "",
+      "era": "modern (Wikipedia)"
+    },
+    {
+      "name": "Berguinho",
+      "goals": 3,
+      "appearances": 26,
+      "year_span": "2025–26",
+      "seasons_at_persib": 1,
+      "source": "wikipedia",
+      "notes": "",
+      "era": "modern (Wikipedia)"
+    },
+    {
+      "name": "Nick Kuipers",
+      "goals": 3,
+      "appearances": 36,
+      "year_span": "2024–25",
+      "seasons_at_persib": 1,
+      "source": "wikipedia",
+      "notes": "",
+      "era": "modern (Wikipedia)"
+    },
+    {
+      "name": "Ryan Kurnia",
+      "goals": 3,
+      "appearances": 29,
+      "year_span": "2024–25",
+      "seasons_at_persib": 1,
+      "source": "wikipedia",
+      "notes": "",
+      "era": "modern (Wikipedia)"
+    }
+  ],
+  "historical_era_1933_2010": [
+    {
+      "name": "Hilton Mauro Moreira",
+      "goals": 21,
+      "appearances": 18,
+      "year_span": "2008–2010",
+      "seasons_at_persib": 2,
+      "source": "rsssf",
+      "favorite_opponent": "Persik (4 gol)",
+      "era": "historical (RSSSF, partial)"
+    },
+    {
+      "name": "Adjat Sudradjat",
+      "goals": 19,
+      "appearances": 12,
+      "year_span": "1983–1990",
+      "seasons_at_persib": 6,
+      "source": "rsssf",
+      "favorite_opponent": "PSP (7 gol)",
+      "era": "historical (RSSSF, partial)"
+    },
+    {
+      "name": "Alejandro Tobar",
+      "goals": 14,
+      "appearances": 10,
+      "year_span": "2003–2006",
+      "seasons_at_persib": 3,
+      "source": "rsssf",
+      "favorite_opponent": "Perseden (3 gol)",
+      "era": "historical (RSSSF, partial)"
+    },
+    {
+      "name": "Sujana",
+      "goals": 13,
+      "appearances": 11,
+      "year_span": "2001–2002",
+      "seasons_at_persib": 2,
+      "source": "rsssf",
+      "favorite_opponent": "PSBL (3 gol)",
+      "era": "historical (RSSSF, partial)"
+    },
+    {
+      "name": "Omo",
+      "goals": 13,
+      "appearances": 9,
+      "year_span": "1957–1959",
+      "seasons_at_persib": 3,
+      "source": "rsssf",
+      "favorite_opponent": "Persema (3 gol)",
+      "era": "historical (RSSSF, partial)"
+    },
+    {
+      "name": "Imral Usman",
+      "goals": 12,
+      "appearances": 10,
+      "year_span": "2003–2005",
+      "seasons_at_persib": 3,
+      "source": "rsssf",
+      "favorite_opponent": "Semen (3 gol)",
+      "era": "historical (RSSSF, partial)"
+    },
+    {
+      "name": "Ekene Ikenwa",
+      "goals": 12,
+      "appearances": 4,
+      "year_span": "2005",
+      "seasons_at_persib": 1,
+      "source": "rsssf",
+      "favorite_opponent": "PSDS (4 gol)",
+      "era": "historical (RSSSF, partial)"
+    },
+    {
+      "name": "Yaris Riyadi",
+      "goals": 11,
+      "appearances": 10,
+      "year_span": "2001–2005",
+      "seasons_at_persib": 3,
+      "source": "rsssf",
+      "favorite_opponent": "Persita (2 gol)",
+      "era": "historical (RSSSF, partial)"
+    },
+    {
+      "name": "Cristian Gerard Alfaro Gonzales",
+      "goals": 10,
+      "appearances": 8,
+      "year_span": "2008–2010",
+      "seasons_at_persib": 2,
+      "source": "rsssf",
+      "favorite_opponent": "Persiba (2 gol)",
+      "era": "historical (RSSSF, partial)"
+    },
+    {
+      "name": "Boy Jati Asmara",
+      "goals": 8,
+      "appearances": 7,
+      "year_span": "2005",
+      "seasons_at_persib": 1,
+      "source": "rsssf",
+      "favorite_opponent": "Sriwijaya FC (2 gol)",
+      "era": "historical (RSSSF, partial)"
+    },
+    {
+      "name": "Witarsa",
+      "goals": 8,
+      "appearances": 7,
+      "year_span": "1951–1957",
+      "seasons_at_persib": 4,
+      "source": "rsssf",
+      "favorite_opponent": "Persidja Djakarta (2 gol)",
+      "era": "historical (RSSSF, partial)"
+    },
+    {
+      "name": "Wowo",
+      "goals": 8,
+      "appearances": 4,
+      "year_span": "1959",
+      "seasons_at_persib": 1,
+      "source": "rsssf",
+      "favorite_opponent": "Persema (2 gol)",
+      "era": "historical (RSSSF, partial)"
+    },
+    {
+      "name": "Adrian Colombo",
+      "goals": 7,
+      "appearances": 6,
+      "year_span": "2004–2006",
+      "seasons_at_persib": 2,
+      "source": "rsssf",
+      "favorite_opponent": "Persita (2 gol)",
+      "era": "historical (RSSSF, partial)"
+    },
+    {
+      "name": "Rafael Alves Bastos",
+      "goals": 7,
+      "appearances": 6,
+      "year_span": "2008",
+      "seasons_at_persib": 1,
+      "source": "rsssf",
+      "favorite_opponent": "Persik (2 gol)",
+      "era": "historical (RSSSF, partial)"
+    },
+    {
+      "name": "Tanu",
+      "goals": 7,
+      "appearances": 3,
+      "year_span": "1951–1952",
+      "seasons_at_persib": 2,
+      "source": "rsssf",
+      "favorite_opponent": "PSMS Medan (4 gol)",
+      "era": "historical (RSSSF, partial)"
+    }
+  ],
+  "legends_curated_estimates": [
+    {
+      "name": "Sutiono Lamso",
+      "goals": 40,
+      "year_span": "1991–1998",
+      "source": "curated_estimate",
+      "notes": "Captain Persib 1994/95 juara Liga Indonesia. RSSSF hanya catat 4 gol; jumlah karir aktual jauh lebih tinggi karena tidak semua match Liga Indonesia awal punya data goalscorer.",
+      "era": "legend (curated estimate)",
+      "is_estimate": true
+    },
+    {
+      "name": "Adjat Sudradjat",
+      "goals": 50,
+      "year_span": "1983–1990",
+      "source": "curated_estimate",
+      "notes": "Legenda Perserikatan 1986 & 1990. RSSSF catat 19 gol dari final-final besar; karir totalnya jauh lebih tinggi karena banyak pertandingan regional tidak tercatat.",
+      "era": "legend (curated estimate)",
+      "is_estimate": true
+    },
+    {
+      "name": "Robby Darwis",
+      "goals": 25,
+      "year_span": "1980–2000",
+      "source": "curated_estimate",
+      "notes": "Defender-tengah legendaris, kapten 1990s; 5 gol di RSSSF, sebagian besar dari laga final besar. Lebih dikenal sebagai bek, tapi cetak gol penting.",
+      "era": "legend (curated estimate)",
+      "is_estimate": true
+    },
+    {
+      "name": "Atep",
+      "goals": 60,
+      "year_span": "2012–2018",
+      "source": "curated_estimate",
+      "notes": "Kapten Persib juara ISL 2014. Coverage RSSSF nol untuk era ini.",
+      "era": "legend (curated estimate)",
+      "is_estimate": true
+    },
+    {
+      "name": "Tantan",
+      "goals": 50,
+      "year_span": "2008–2020",
+      "source": "curated_estimate",
+      "notes": "Veteran winger Persib, pencetak gol sayap kanan. Coverage RSSSF nol untuk era ini.",
+      "era": "legend (curated estimate)",
+      "is_estimate": true
+    }
+  ],
+  "current_season_2025_26_top_scorers": [
+    {
+      "name": "Andrew Jung",
+      "apps": 23,
+      "goals": 13
+    },
+    {
+      "name": "Uilliam Barros",
+      "apps": 31,
+      "goals": 11
+    },
+    {
+      "name": "Ramon Tanque",
+      "apps": 25,
+      "goals": 6
+    },
+    {
+      "name": "Saddil Ramdani",
+      "apps": 23,
+      "goals": 4
+    },
+    {
+      "name": "Federico Barba",
+      "apps": 23,
+      "goals": 3
+    },
+    {
+      "name": "Luciano Guaycochea",
+      "apps": 25,
+      "goals": 3
+    },
+    {
+      "name": "Frans Putros",
+      "apps": 25,
+      "goals": 3
+    },
+    {
+      "name": "Berguinho",
+      "apps": 26,
+      "goals": 3
+    },
+    {
+      "name": "Adam Alis",
+      "apps": 22,
+      "goals": 3
+    },
+    {
+      "name": "Thom Haye",
+      "apps": 23,
+      "goals": 2
+    }
+  ],
+  "hat_tricks_historical": [
+    {
+      "player": "Tanu",
+      "goals": 4,
+      "season": "1952",
+      "opponent": "PSMS Medan",
+      "date": "Dec 21",
+      "score": "4-2",
+      "team1": "Persib Bandung",
+      "team2": "PSMS Medan"
+    },
+    {
+      "player": "Ekene Ikenwa",
+      "goals": 4,
+      "season": "2005",
+      "opponent": "PSDS",
+      "date": "Aug 16",
+      "score": "4-1",
+      "team1": "Persib",
+      "team2": "PSDS"
+    },
+    {
+      "player": "Omo",
+      "goals": 3,
+      "season": "1959-61",
+      "opponent": "Persema",
+      "date": "Jun 3",
+      "score": "7-1",
+      "team1": "Persib",
+      "team2": "Persema"
+    },
+    {
+      "player": "Dedy Sutendi",
+      "goals": 3,
+      "season": "1973-75",
+      "opponent": "Gasko",
+      "date": "Oct 27",
+      "score": "4-0",
+      "team1": "Persib",
+      "team2": "Gasko"
+    },
+    {
+      "player": "Adjat Sudradjat",
+      "goals": 3,
+      "season": "1983",
+      "opponent": "PSP",
+      "date": "Apr 15",
+      "score": "5-1",
+      "team1": "Persib",
+      "team2": "PSP"
+    },
+    {
+      "player": "Adjat Sudradjat",
+      "goals": 3,
+      "season": "1984",
+      "opponent": "PSP",
+      "date": "Oct 26",
+      "score": "5-0",
+      "team1": "Persib",
+      "team2": "PSP"
+    },
+    {
+      "player": "Sutiono Lamso",
+      "goals": 3,
+      "season": "1994",
+      "opponent": "Persiraja",
+      "date": "Apr 8",
+      "score": "4-1",
+      "team1": "Persib",
+      "team2": "Persiraja"
+    },
+    {
+      "player": "Imral Usman",
+      "goals": 3,
+      "season": "2003",
+      "opponent": "Semen",
+      "date": "May 18",
+      "score": "3-1",
+      "team1": "Persib",
+      "team2": "Semen"
+    },
+    {
+      "player": "Alejandro Tobar",
+      "goals": 3,
+      "season": "2003",
+      "opponent": "Perseden",
+      "date": "Oct 18",
+      "score": "4-4",
+      "team1": "Persib",
+      "team2": "Perseden"
+    },
+    {
+      "player": "Ekene Ikenwa",
+      "goals": 3,
+      "season": "2005",
+      "opponent": "Deltras",
+      "date": "Mar 16",
+      "score": "3-1",
+      "team1": "Persib",
+      "team2": "Deltras"
+    },
+    {
+      "player": "Ekene Ikenwa",
+      "goals": 3,
+      "season": "2005",
+      "opponent": "Semen Padang",
+      "date": "Apr 29",
+      "score": "3-1",
+      "team1": "Persib",
+      "team2": "Semen Padang"
+    }
+  ],
+  "da_silva_career_summary": {
+    "total_goals": 73,
+    "total_appearances": 113,
+    "seasons": [
+      "2021-22",
+      "2022-23",
+      "2023-24",
+      "2024-25"
+    ],
+    "achievements": [
+      "Top scorer Liga 1 2023/24 dengan 30 gol",
+      "Top scorer Persib 2022/23 dengan 24 gol",
+      "Bagian dari skuad juara Liga 1 2023/24 & 2024/25",
+      "Pemain asing dengan jumlah gol terbanyak di Persib era Liga 1"
+    ],
+    "joined": "2021 (dari Terengganu, Malaysia)",
+    "left": "2025 (ke Malut United)"
+  }
+}
