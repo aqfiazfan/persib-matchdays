@@ -1133,6 +1133,7 @@ window.addEventListener('error', function(e){
 
   // Rival cards
   function fallbackBadgeSvg(name, colors) {
+    colors = colors && colors.length >= 2 ? colors : ['#0033A0','#FFFFFF'];
     const init = name.replace(/[^A-Z]/g, '').slice(0,2) || name.slice(0,2).toUpperCase();
     return `<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
       <circle cx="30" cy="30" r="28" fill="${colors[0]}" stroke="${colors[1]}" stroke-width="2"/>
