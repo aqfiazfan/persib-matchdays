@@ -960,7 +960,7 @@
       <div class="canvas-wrap"><canvas id="chart-decade-wdl"></canvas></div>
     </div>
     <div class="chart-card">
-      <h3>Produktivitas serangan vs solidnya pertahanan</h3>
+      <h3>Gol dicetak vs dikebobolan per dekade</h3>
       <p class="desc">Garis biru: gol Persib. Garis merah: gol yang dimasukkan lawan. Tren menanjak di era 2000-an bukan karena Persib lebih garang — tapi karena jumlah pertandingan per musim memang melonjak.</p>
       <div class="canvas-wrap"><canvas id="chart-decade-goals"></canvas></div>
     </div>
@@ -968,6 +968,28 @@
       <h3>Pertandingan per tahun kalender</h3>
       <p class="desc">Dari Stedenwedstrijden lima laga setahun, sampai musim Liga 1 modern dengan 30+ laga. Distribusi waktu pertandingan adalah cermin perubahan struktur kompetisi.</p>
       <div class="canvas-wrap"><canvas id="chart-yearly"></canvas></div>
+    </div>
+
+    <!-- NEW: Bubble chart serangan vs pertahanan -->
+    <div class="chart-card wide" id="attack-defense-card">
+      <h3>Peta performa dekade: Serangan × Pertahanan × Hasil</h3>
+      <p class="desc">
+        Tiap lingkaran = satu dekade. Posisi horizontal = produktivitas serangan (gol per match).
+        Posisi vertikal = soliditas pertahanan (kebobolan per match — lebih rendah lebih baik).
+        Ukuran = jumlah pertandingan. Warna = win rate.
+        <span style="display:inline-flex;gap:14px;margin-top:6px;font-size:12px;">
+          <span style="color:#2f7a3a;font-weight:600;">● &gt;50% menang</span>
+          <span style="color:#c69314;font-weight:600;">● 40–50% menang</span>
+          <span style="color:#b32424;font-weight:600;">● &lt;40% menang</span>
+        </span>
+      </p>
+      <div class="canvas-wrap" style="height:420px;position:relative;">
+        <canvas id="chart-attack-defense"></canvas>
+      </div>
+      <div id="attack-defense-detail" style="margin-top:16px;padding:14px;background:var(--persib-blue-dark);border-radius:6px;display:none;color:white;font-size:14px;line-height:1.7;">
+        <strong id="ad-decade" style="color:var(--persib-gold);font-size:16px;display:block;margin-bottom:6px;"></strong>
+        <div id="ad-stats"></div>
+      </div>
     </div>
   </div>
 </section>
@@ -1244,6 +1266,147 @@ window.addEventListener('error', function(e){
       scales: { y: {beginAtZero:true} }
     }
   });
+
+  // ── BUBBLE CHART: Serangan × Pertahanan × Hasil per dekade ────────────────
+  if (chartsAvailable && document.getElementById('chart-attack-defense')) {
+    const decRaw = (data.by_decade || []).filter(d => d.total >= 10);
+    const DECADE_NAMES = {
+      1930:'1930-an',1940:'1940-an',1950:'1950-an',1960:'1960-an',
+      1970:'1970-an',1980:'1980-an',1990:'1990-an',2000:'2000-an',
+      2010:'2010-an',2020:'2020-an'
+    };
+
+    // Compute averages for quadrant crosshair
+    const avgX = decRaw.reduce((s,d) => s + d.gf/d.total, 0) / decRaw.length;
+    const avgY = decRaw.reduce((s,d) => s + d.ga/d.total, 0) / decRaw.length;
+
+    const bubbleData = decRaw.map(d => ({
+      x: parseFloat((d.gf / d.total).toFixed(3)),
+      y: parseFloat((d.ga / d.total).toFixed(3)),
+      r: Math.max(10, Math.sqrt(d.total) * 1.6),
+      decade: d.decade,
+      W: d.W, D: d.D, L: d.L,
+      total: d.total, gf: d.gf, ga: d.ga,
+      wr: (d.W / d.total * 100).toFixed(1)
+    }));
+
+    const quadrantPlugin = {
+      id: 'quadrant',
+      afterDraw(chart) {
+        const {ctx, chartArea:{left,right,top,bottom}, scales:{x,y}} = chart;
+        const mx = x.getPixelForValue(avgX);
+        const my = y.getPixelForValue(avgY);
+        ctx.save();
+        // Quadrant shading
+        const quads = [
+          {x1:left,y1:top,   x2:mx,    y2:my,    color:'rgba(47,122,58,0.06)'},  // top-left: kuat defend, lemah serang
+          {x1:mx,  y1:top,   x2:right, y2:my,    color:'rgba(198,147,20,0.06)'}, // top-right: eksplosif
+          {x1:left,y1:my,    x2:mx,    y2:bottom, color:'rgba(179,36,36,0.06)'},  // btm-left: sulit
+          {x1:mx,  y1:my,    x2:right, y2:bottom, color:'rgba(0,33,160,0.06)'},   // btm-right: dominan
+        ];
+        quads.forEach(q => {
+          ctx.fillStyle = q.color;
+          ctx.fillRect(q.x1, q.y1, q.x2-q.x1, q.y2-q.y1);
+        });
+        // Crosshair
+        ctx.strokeStyle = 'rgba(0,0,0,0.12)';
+        ctx.setLineDash([5,5]); ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.moveTo(mx,top); ctx.lineTo(mx,bottom); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(left,my); ctx.lineTo(right,my); ctx.stroke();
+        ctx.setLineDash([]);
+        // Quadrant labels
+        ctx.font = '600 11px sans-serif'; ctx.fillStyle = 'rgba(0,0,0,0.3)';
+        ctx.fillText('🛡️ Kuat bertahan, lemah serang', left+8, top+16);
+        ctx.fillText('⚡ Eksplosif', mx+8, top+16);
+        ctx.fillText('❌ Era sulit', left+8, my+16);
+        ctx.fillText('👑 Dominan', mx+8, my+16);
+        // Decade labels inside bubbles
+        ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+        chart.data.datasets[0].data.forEach(pt => {
+          const px = x.getPixelForValue(pt.x);
+          const py = y.getPixelForValue(pt.y);
+          ctx.font = 'bold 10px sans-serif'; ctx.fillStyle = 'white';
+          const label = String(pt.decade).slice(2) + 's';
+          ctx.fillText(label, px, py);
+        });
+        ctx.restore();
+      }
+    };
+
+    const adDetail = document.getElementById('attack-defense-detail');
+    const adDecade = document.getElementById('ad-decade');
+    const adStats  = document.getElementById('ad-stats');
+
+    new Chart(document.getElementById('chart-attack-defense'), {
+      type: 'bubble',
+      plugins: [quadrantPlugin],
+      data: {
+        datasets: [{
+          label: 'Persib per dekade',
+          data: bubbleData,
+          backgroundColor: bubbleData.map(d => {
+            const wr = parseFloat(d.wr);
+            if (wr >= 50) return 'rgba(0,100,50,0.82)';
+            if (wr >= 40) return 'rgba(180,120,10,0.82)';
+            return 'rgba(160,30,30,0.82)';
+          }),
+          borderColor: 'rgba(255,255,255,0.7)',
+          borderWidth: 2,
+          hoverBorderWidth: 3,
+          hoverBorderColor: '#fff',
+        }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        onClick(e, elements) {
+          if (!elements.length) { adDetail.style.display='none'; return; }
+          const d = bubbleData[elements[0].index];
+          const wr = parseFloat(d.wr);
+          const quad = d.x >= avgX && d.y <= avgY ? '👑 Dominan'
+                     : d.x >= avgX && d.y >  avgY ? '⚡ Eksplosif'
+                     : d.x <  avgX && d.y <= avgY ? '🛡️ Bertahan solid'
+                     : '❌ Era sulit';
+          adDecade.textContent = `Dekade ${DECADE_NAMES[d.decade] || d.decade}  ·  ${quad}`;
+          adStats.innerHTML = [
+            `<b>Hasil:</b> ${d.W}M · ${d.D}S · ${d.L}K &nbsp;(${d.total} laga)&nbsp; <b>Win rate ${d.wr}%</b>`,
+            `<b>Serangan:</b> ${d.x} gol/match &nbsp;·&nbsp; <b>Pertahanan:</b> ${d.y} kebobolan/match`,
+            `<b>Total gol:</b> ${d.gf} dicetak, ${d.ga} dikebobolan &nbsp;(selisih ${d.gf-d.ga>=0?'+':''}${d.gf-d.ga})`,
+          ].join('<br>');
+          adDetail.style.display = 'block';
+        },
+        plugins: {
+          legend: {display: false},
+          tooltip: {
+            callbacks: {
+              title: items => 'Dekade ' + (DECADE_NAMES[items[0].raw.decade] || items[0].raw.decade),
+              label: item => {
+                const d = item.raw;
+                return [
+                  `Serangan: ${d.x} gol/match`,
+                  `Kebobolan: ${d.y}/match`,
+                  `${d.W}M · ${d.D}S · ${d.L}K (${d.total} laga)`,
+                  `Win rate: ${d.wr}%`,
+                ];
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            title: {display:true, text:'Gol per pertandingan (← lemah | kuat →)', font:{size:11}, color:'#666'},
+            grid: {color:'rgba(0,0,0,0.05)'},
+            ticks: {font:{size:11}}
+          },
+          y: {
+            title: {display:true, text:'Kebobolan per pertandingan (↑ buruk | baik ↓)', font:{size:11}, color:'#666'},
+            grid: {color:'rgba(0,0,0,0.05)'},
+            ticks: {font:{size:11}}
+          }
+        }
+      }
+    });
+  }
+  // ── END bubble chart ────────────────────────────────────────────────────────
 
   // Rival cards
   function fallbackBadgeSvg(name, colors) {
