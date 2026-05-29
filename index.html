@@ -840,6 +840,109 @@
   .section-eyebrow { font-size:10px !important; letter-spacing:4px !important; text-transform:uppercase !important; color:var(--persib-gold) !important; font-weight:700 !important; display:inline-block; border-bottom:2px solid var(--persib-gold); padding-bottom:3px; margin-bottom:14px !important; }
   .section-head { margin-bottom:40px !important; }
 
+  /* ====== GAME CHARACTER SECTION ====== */
+  #game-character { background: var(--persib-blue-dark); padding: 60px 0; }
+  #game-character .section-head { padding: 0 var(--page-pad); }
+  #game-character .section-title { color: white !important; }
+  #game-character .section-eyebrow { color: var(--persib-gold) !important; border-color: var(--persib-gold) !important; }
+  #game-character .section-narrative { color: rgba(255,255,255,0.55) !important; }
+
+  .gc-block {
+    background: rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 32px;
+    margin: 0 var(--page-pad) 28px;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .gc-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px; font-weight: 700;
+    color: white; margin-bottom: 6px;
+  }
+  .gc-sub { font-size: 14px; color: rgba(255,255,255,0.5); margin-bottom: 24px; }
+  .gc-note {
+    margin-top: 20px; font-size: 14px; font-style: italic;
+    color: rgba(255,255,255,0.6); text-align: center; line-height: 1.6;
+  }
+
+  /* Home vs Away grid */
+  .ha-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 0 24px;
+    align-items: center;
+  }
+  .ha-side {
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    padding: 24px 20px;
+    text-align: center;
+  }
+  .ha-badge { font-size: 36px; margin-bottom: 8px; }
+  .ha-label { font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 12px; }
+  .ha-wr {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 8vw, 80px);
+    font-weight: 900; line-height: 1;
+    color: white; margin-bottom: 4px;
+  }
+  .ha-home .ha-wr { color: #5de85d; }
+  .ha-away .ha-wr { color: #f5c842; }
+  .ha-wr-sub { font-size: 12px; color: rgba(255,255,255,0.4); margin-bottom: 20px; }
+  .ha-bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .ha-bar-label { font-size: 12px; color: rgba(255,255,255,0.6); width: 48px; text-align: right; flex-shrink: 0; }
+  .ha-bar-wrap { flex: 1; background: rgba(255,255,255,0.1); border-radius: 4px; height: 10px; overflow: hidden; }
+  .ha-bar-fill { height: 100%; border-radius: 4px; transition: width 0.8s ease; }
+  .ha-bar-val { font-size: 12px; color: rgba(255,255,255,0.7); font-weight: 600; width: 36px; text-align: left; flex-shrink: 0; }
+  .ha-metrics {
+    display: flex; justify-content: space-around;
+    margin-top: 18px; padding-top: 16px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .ha-metric { text-align: center; }
+  .ha-metric-val { font-size: 22px; font-weight: 700; color: white; font-family: 'Playfair Display', serif; }
+  .ha-metric-lbl { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-top: 2px; }
+  .ha-vs {
+    font-size: 24px; font-weight: 900; font-family: 'Playfair Display', serif;
+    color: var(--persib-gold); text-align: center;
+  }
+
+  /* Score distribution */
+  .score-filter {
+    display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px;
+  }
+  .sf-btn {
+    padding: 6px 16px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2);
+    background: transparent; color: rgba(255,255,255,0.6); font-size: 13px;
+    cursor: pointer; transition: all 0.18s; touch-action: manipulation;
+  }
+  .sf-btn.active, .sf-btn:hover {
+    background: var(--persib-gold); border-color: var(--persib-gold);
+    color: #000; font-weight: 700;
+  }
+  .score-grid {
+    display: flex; flex-wrap: wrap; gap: 10px;
+    align-items: flex-end;
+  }
+  .score-cell {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    border-radius: 8px; cursor: default;
+    transition: transform 0.15s, box-shadow 0.15s;
+    position: relative; overflow: hidden;
+    touch-action: manipulation;
+  }
+  .score-cell:hover { transform: translateY(-3px) scale(1.05); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
+  .score-cell .sc-score { font-weight: 900; font-family: 'Playfair Display', serif; color: white; line-height: 1; }
+  .score-cell .sc-count { color: rgba(255,255,255,0.75); line-height: 1.2; }
+  .score-cell .sc-pct { color: rgba(255,255,255,0.5); }
+  .score-note { font-size: 13px; color: rgba(255,255,255,0.45); margin-top: 16px; font-style: italic; }
+
+  @media(max-width:640px){
+    .ha-grid { grid-template-columns: 1fr; gap: 16px 0; }
+    .ha-vs { display: none; }
+    .gc-block { padding: 20px 16px; }
+  }
+
   /* Mobile touch fix */
   .trivia-card, .rival-card, .stat-card, th[data-sort], button, select, input,
   .player-list li, .hattrick-item {
@@ -991,6 +1094,57 @@
         <div id="ad-stats"></div>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="game-character">
+  <div class="section-head">
+    <span class="section-eyebrow">Karakter Bermain</span>
+    <h2 class="section-title">Kandang vs Tandang &amp; Skor Paling Sering</h2>
+    <p class="section-narrative">Dua pertanyaan yang sering ditanya: seberapa kuat Persib di kandang sendiri? Dan skor apa yang paling sering muncul ketika mereka bermain?</p>
+  </div>
+
+  <!-- HOME VS AWAY -->
+  <div class="gc-block" id="home-away-block">
+    <h3 class="gc-title">🏠 Kandang vs ✈️ Tandang</h3>
+    <p class="gc-sub">Dari <span id="ha-total-home">—</span> laga kandang dan <span id="ha-total-away">—</span> laga tandang yang tercatat</p>
+    <div class="ha-grid">
+      <!-- HOME -->
+      <div class="ha-side ha-home">
+        <div class="ha-badge">🏠</div>
+        <div class="ha-label">Kandang</div>
+        <div class="ha-wr" id="ha-home-wr">—</div>
+        <div class="ha-wr-sub">dari 100 laga, menang</div>
+        <div class="ha-bars" id="ha-home-bars"></div>
+        <div class="ha-metrics" id="ha-home-metrics"></div>
+      </div>
+      <!-- DIVIDER -->
+      <div class="ha-vs">VS</div>
+      <!-- AWAY -->
+      <div class="ha-side ha-away">
+        <div class="ha-badge">✈️</div>
+        <div class="ha-label">Tandang</div>
+        <div class="ha-wr" id="ha-away-wr">—</div>
+        <div class="ha-wr-sub">dari 100 laga, menang</div>
+        <div class="ha-bars" id="ha-away-bars"></div>
+        <div class="ha-metrics" id="ha-away-metrics"></div>
+      </div>
+    </div>
+    <p class="gc-note" id="ha-verdict"></p>
+  </div>
+
+  <!-- SCORE DISTRIBUTION -->
+  <div class="gc-block" id="score-dist-block">
+    <h3 class="gc-title">📊 Skor yang Paling Sering Terjadi</h3>
+    <p class="gc-sub">Ukuran kartu = seberapa sering skor itu muncul. <span style="color:var(--win)">■ Menang</span> &nbsp;<span style="color:var(--draw)">■ Seri</span> &nbsp;<span style="color:var(--loss)">■ Kalah</span></p>
+    <div class="score-filter">
+      <button class="sf-btn active" data-filter="all">Semua</button>
+      <button class="sf-btn" data-filter="W">Kemenangan</button>
+      <button class="sf-btn" data-filter="D">Seri</button>
+      <button class="sf-btn" data-filter="L">Kekalahan</button>
+    </div>
+    <div class="score-grid" id="score-grid"></div>
+    <p class="score-note" id="score-total-note"></p>
   </div>
 </section>
 
@@ -1407,6 +1561,127 @@ window.addEventListener('error', function(e){
     });
   }
   // ── END bubble chart ────────────────────────────────────────────────────────
+
+  // ══════════════════════════════════════════════════════════════════════
+  // HOME VS AWAY + SCORE DISTRIBUTION
+  // ══════════════════════════════════════════════════════════════════════
+  (function() {
+    const matches = data.matches.filter(m => ['W','D','L'].includes(m.r));
+
+    // ── Home vs Away ────────────────────────────────────────────────────
+    function getStats(side) {
+      const ms = matches.filter(m => m.side === side);
+      const W = ms.filter(m => m.r==='W').length;
+      const D = ms.filter(m => m.r==='D').length;
+      const L = ms.filter(m => m.r==='L').length;
+      const total = ms.length;
+      let gf=0, ga=0, cs=0;
+      ms.forEach(m => {
+        const p = m.s.split('-');
+        if (p.length!==2) return;
+        const g1=parseInt(p[0]), g2=parseInt(p[1]);
+        const persibG = side==='home' ? g1 : g2;
+        const oppG    = side==='home' ? g2 : g1;
+        gf += persibG; ga += oppG;
+        if (oppG===0) cs++;
+      });
+      return { W, D, L, total, gf, ga, cs,
+        wr: total ? Math.round(W/total*100) : 0,
+        gpg: total ? (gf/total).toFixed(2) : '0',
+        cpg: total ? (ga/total).toFixed(2) : '0',
+        cspct: total ? Math.round(cs/total*100) : 0 };
+    }
+
+    const home = getStats('home');
+    const away = getStats('away');
+
+    document.getElementById('ha-total-home').textContent = fmt(home.total);
+    document.getElementById('ha-total-away').textContent = fmt(away.total);
+
+    function renderHASide(id_wr, id_bars, id_metrics, st) {
+      document.getElementById(id_wr).textContent = st.wr;
+      // Bars
+      const barsHTML = [
+        { label:'Menang', val:st.W, pct:Math.round(st.W/st.total*100), color:'#2f7a3a' },
+        { label:'Seri',   val:st.D, pct:Math.round(st.D/st.total*100), color:'#c69314' },
+        { label:'Kalah',  val:st.L, pct:Math.round(st.L/st.total*100), color:'#b32424' },
+      ].map(b => `
+        <div class="ha-bar-row">
+          <div class="ha-bar-label">${b.label}</div>
+          <div class="ha-bar-wrap"><div class="ha-bar-fill" style="width:${b.pct}%;background:${b.color}"></div></div>
+          <div class="ha-bar-val">${b.val}</div>
+        </div>`).join('');
+      document.getElementById(id_bars).innerHTML = barsHTML;
+      // Metrics
+      document.getElementById(id_metrics).innerHTML = `
+        <div class="ha-metric"><div class="ha-metric-val">${st.gpg}</div><div class="ha-metric-lbl">Gol/match</div></div>
+        <div class="ha-metric"><div class="ha-metric-val">${st.cpg}</div><div class="ha-metric-lbl">Kebobolan</div></div>
+        <div class="ha-metric"><div class="ha-metric-val">${st.cspct}%</div><div class="ha-metric-lbl">Clean sheet</div></div>
+      `;
+    }
+    renderHASide('ha-home-wr','ha-home-bars','ha-home-metrics', home);
+    renderHASide('ha-away-wr','ha-away-bars','ha-away-metrics', away);
+
+    const diff = home.wr - away.wr;
+    document.getElementById('ha-verdict').innerHTML = diff > 0
+      ? `📍 Persib <strong>${diff} poin persentase</strong> lebih sering menang saat bermain di kandang sendiri. Selisih gol/match pun lebih baik: ${home.gpg} cetak vs ${home.cpg} kebobolan di kandang, berbanding ${away.gpg} cetak vs ${away.cpg} kebobolan di tandang.`
+      : `Menariknya, Persib justru lebih baik saat bermain tandang (win rate <strong>${away.wr}%</strong> vs kandang <strong>${home.wr}%</strong>).`;
+
+    // ── Score Distribution ───────────────────────────────────────────────
+    const scoreMap = {};
+    matches.forEach(m => {
+      const p = m.s.split('-');
+      if (p.length!==2) return;
+      const g1=parseInt(p[0]), g2=parseInt(p[1]);
+      const persibG = m.side==='home' ? g1 : g2;
+      const oppG    = m.side==='home' ? g2 : g1;
+      const key = `${persibG}-${oppG}`;
+      if (!scoreMap[key]) scoreMap[key] = {score:key,W:0,D:0,L:0,total:0,r:m.r};
+      scoreMap[key][m.r]++;
+      scoreMap[key].total++;
+      // dominant result
+      const s = scoreMap[key];
+      s.r = s.W>=s.D && s.W>=s.L ? 'W' : (s.D>=s.L ? 'D' : 'L');
+    });
+    const allScores = Object.values(scoreMap).sort((a,b) => b.total-a.total);
+    const totalMatches = matches.length;
+
+    const RESULT_COLOR = { W:'rgba(47,122,58,0.85)', D:'rgba(180,130,10,0.85)', L:'rgba(160,36,36,0.85)' };
+    const RESULT_LABEL = { W:'Menang', D:'Seri', L:'Kalah' };
+
+    function renderScoreGrid(filter) {
+      const filtered = filter==='all' ? allScores : allScores.filter(s => s.r===filter);
+      const top = filtered.slice(0, 24);
+      const maxN = top[0]?.total || 1;
+      const grid = document.getElementById('score-grid');
+      grid.innerHTML = top.map(s => {
+        const ratio = s.total / maxN;
+        const size = Math.max(64, Math.round(64 + ratio * 60));  // 64–124px
+        const fontSize = Math.max(16, Math.round(14 + ratio * 12));
+        const subSize = Math.max(10, Math.round(10 + ratio*3));
+        const pct = (s.total/totalMatches*100).toFixed(1);
+        const tooltip = `${RESULT_LABEL[s.r]}: ${s.W}M · ${s.D}S · ${s.L}K`;
+        return `<div class="score-cell" style="width:${size}px;height:${size}px;background:${RESULT_COLOR[s.r]};"
+                     title="${tooltip}">
+          <div class="sc-score" style="font-size:${fontSize}px">${s.score}</div>
+          <div class="sc-count" style="font-size:${subSize}px">${s.total}×</div>
+          <div class="sc-pct" style="font-size:${Math.max(9,subSize-2)}px">${pct}%</div>
+        </div>`;
+      }).join('');
+      document.getElementById('score-total-note').textContent =
+        `Menampilkan ${top.length} dari ${filtered.length} variasi skor unik${filter!=='all'?' ('+RESULT_LABEL[filter]+')':''}. Total skor unik: ${allScores.length}.`;
+    }
+    renderScoreGrid('all');
+
+    document.querySelectorAll('.sf-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.sf-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        renderScoreGrid(this.dataset.filter);
+      });
+    });
+  })();
+  // ── END game character ─────────────────────────────────────────────────────
 
   // Rival cards
   function fallbackBadgeSvg(name, colors) {
