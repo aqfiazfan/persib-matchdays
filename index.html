@@ -365,6 +365,9 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 24px;
+    overflow: hidden;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   @media (min-width: 900px) {
     .charts-grid { grid-template-columns: 1fr 1fr; }
@@ -431,6 +434,7 @@
     font-family: 'Playfair Display', serif;
     font-size: 20px; font-weight: 700;
     color: var(--persib-blue-dark);
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
     line-height: 1.2;
   }
   .rival-info .nickname {
@@ -506,6 +510,7 @@
     font-weight: 600;
     color: var(--ink);
     font-size: 15px;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
     line-height: 1.2;
     overflow: hidden; text-overflow: ellipsis;
     white-space: nowrap;
@@ -576,6 +581,7 @@
   .da-silva-spotlight {
     background: linear-gradient(135deg, var(--persib-blue) 0%, var(--persib-blue-dark) 100%);
     color: white;
+    overflow: hidden; max-width: 100%; box-sizing: border-box;
     border-radius: 12px;
     padding: 32px;
     margin-bottom: 32px;
@@ -766,7 +772,7 @@
   .pill.D { background: rgba(198,147,20,0.12); color: var(--draw); }
   .pill.L { background: rgba(179,36,36,0.12); color: var(--loss); }
   .pill.other { background: #e5e7eb; color: #374151; }
-  .score-cell { font-weight: 700; color: var(--persib-blue-dark);
+  .sdist-cell { font-weight: 700; color: var(--persib-blue-dark);
                 font-variant-numeric: tabular-nums; }
   .empty { text-align: center; padding: 40px; color: var(--ink-muted); }
 
@@ -795,7 +801,7 @@
   .hero-monument {
     position:relative; background:linear-gradient(145deg,#001255 0%,#002080 50%,#001a55 100%);
     overflow:hidden; min-height:320px; display:flex; align-items:center; justify-content:center;
-    width:100%; box-sizing:border-box;
+    width:100%; max-width:100%; box-sizing:border-box;
   }
   .hero-monument::before {
     content:''; position:absolute; inset:0;
@@ -824,7 +830,7 @@
 
   .stat-card { border-top:3px solid var(--persib-gold) !important; border-left:none !important; padding:24px 24px !important; overflow:hidden; }
   .stat-card .label { font-size:10px !important; letter-spacing:3px !important; text-transform:uppercase !important; color:var(--persib-gold) !important; font-weight:700 !important; }
-  .stat-card .value { font-size:clamp(36px,4.5vw,64px) !important; font-weight:900 !important; font-family:'Playfair Display',serif; color:var(--persib-blue-dark) !important; line-height:1 !important; letter-spacing:-0.02em; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .stat-card .value { font-size:clamp(28px,4vw,56px) !important; font-weight:900 !important; font-family:'Playfair Display',serif; color:var(--persib-blue-dark) !important; line-height:1 !important; letter-spacing:-0.02em; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:100%; display:block; }
 
   #snapshot { background:var(--persib-blue-dark); padding:60px 0; }
   #snapshot .section-head { padding:0 var(--page-pad); }
@@ -924,17 +930,17 @@
     display: flex; flex-wrap: wrap; gap: 10px;
     align-items: flex-end;
   }
-  .score-cell {
+  .sdist-cell {
     display: flex; flex-direction: column; align-items: center; justify-content: center;
     border-radius: 8px; cursor: default;
     transition: transform 0.15s, box-shadow 0.15s;
     position: relative; overflow: hidden;
     touch-action: manipulation;
   }
-  .score-cell:hover { transform: translateY(-3px) scale(1.05); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
-  .score-cell .sc-score { font-weight: 900; font-family: 'Playfair Display', serif; color: white; line-height: 1; }
-  .score-cell .sc-count { color: rgba(255,255,255,0.75); line-height: 1.2; }
-  .score-cell .sc-pct { color: rgba(255,255,255,0.5); }
+  .sdist-cell:hover { transform: translateY(-3px) scale(1.05); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
+  .sdist-cell .sc-score { font-weight: 900; font-family: 'Playfair Display', serif; color: white; line-height: 1; }
+  .sdist-cell .sc-count { color: rgba(255,255,255,0.75); line-height: 1.2; }
+  .sdist-cell .sc-pct { color: rgba(255,255,255,0.5); }
   .score-note { font-size: 13px; color: rgba(255,255,255,0.45); margin-top: 16px; font-style: italic; }
 
   @media(max-width:640px){
@@ -1661,7 +1667,7 @@ window.addEventListener('error', function(e){
         const subSize = Math.max(10, Math.round(10 + ratio*3));
         const pct = (s.total/totalMatches*100).toFixed(1);
         const tooltip = `${RESULT_LABEL[s.r]}: ${s.W}M · ${s.D}S · ${s.L}K`;
-        return `<div class="score-cell" style="width:${size}px;height:${size}px;background:${RESULT_COLOR[s.r]};"
+        return `<div class="sdist-cell" style="width:${size}px;height:${size}px;background:${RESULT_COLOR[s.r]};"
                      title="${tooltip}">
           <div class="sc-score" style="font-size:${fontSize}px">${s.score}</div>
           <div class="sc-count" style="font-size:${subSize}px">${s.total}×</div>
@@ -1846,7 +1852,7 @@ window.addEventListener('error', function(e){
         <td>${escapeHtml(displaySeason(m.y))}</td>
         <td>${escapeHtml(m.d)}</td>
         <td>${escapeHtml(m.t1)}</td>
-        <td class="score-cell">${escapeHtml(m.s)}</td>
+        <td class="sdist-cell">${escapeHtml(m.s)}</td>
         <td>${escapeHtml(m.t2)}</td>
         <td><span class="pill ${resCls}">${escapeHtml(m.r)}</span></td>
         <td title="${escapeHtml(m.sub||'')}">${escapeHtml(m.comp || 'Unknown')}</td>
