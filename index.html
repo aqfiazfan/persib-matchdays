@@ -990,6 +990,7 @@
     height: 44px; position: sticky; top: 0; z-index: 1000;
     border-bottom: 1px solid rgba(255,255,255,0.08);
   }
+  .club-nav-sep { color: rgba(255,255,255,0.2); font-size: 14px; user-select:none; }
   .club-nav-brand {
     font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
     color: rgba(255,255,255,0.4); font-weight: 600;
@@ -1025,15 +1026,23 @@
 
 <!-- Club navigation bar -->
 <nav class="club-nav">
-  <span class="club-nav-brand">Seri Statistik Sepak Bola Indonesia</span>
+  <span class="club-nav-brand">⚽ Seri Statistik Sepak Bola Indonesia</span>
   <div class="club-nav-links">
-    <a class="club-nav-btn active" href="#">
-      <span class="club-nav-dot" style="background:#C8A400"></span>
-      Persib Bandung
+    <a class="club-nav-btn active" href="#" title="Persib Bandung — kamu sedang di sini">
+      <span class="club-nav-dot" style="background:#0033A0"></span>
+      Persib
     </a>
-    <a class="club-nav-btn other" href="https://aqfiazfan.github.io/persija-matchdays/" target="_blank">
+    <span class="club-nav-sep">·</span>
+    <a class="club-nav-btn other" href="https://aqfiazfan.github.io/persija-matchdays/" target="_blank"
+       title="Persija Jakarta — 1.280+ pertandingan sejak 1930">
       <span class="club-nav-dot" style="background:#E40521"></span>
-      Persija Jakarta ↗
+      Persija
+    </a>
+    <span class="club-nav-sep">·</span>
+    <a class="club-nav-btn other" href="https://aqfiazfan.github.io/psm-matchdays/" target="_blank"
+       title="PSM Makassar — 1.100+ pertandingan sejak 1930">
+      <span class="club-nav-dot" style="background:#F5A623"></span>
+      PSM
     </a>
   </div>
 </nav>
