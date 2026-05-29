@@ -199,7 +199,7 @@
     border-radius: 4px;
     box-shadow: 0 16px 48px rgba(0,30,90,0.10);
     position: relative;
-    z-index: 2;
+    z-index: 1;
   }
   .lede {
     font-family: 'Playfair Display', serif;
@@ -756,8 +756,8 @@
        text-transform: uppercase; letter-spacing: 1px;
        cursor: pointer; user-select: none; }
   th:hover { background: var(--persib-blue-dark); }
-  th.sorted-asc::after { content: " â–²"; font-size: 9px; }
-  th.sorted-desc::after { content: " â–¼"; font-size: 9px; }
+  th.sorted-asc::after { content: " ▲"; font-size: 9px; }
+  th.sorted-desc::after { content: " ▼"; font-size: 9px; }
   td { padding: 10px 14px; border-bottom: 1px solid var(--rule); }
   tr:hover td { background: rgba(0,51,160,0.03); }
   .pill { display: inline-block; padding: 3px 9px; border-radius: 999px;
@@ -800,6 +800,7 @@
   .hero-monument::before {
     content:''; position:absolute; inset:0;
     background:radial-gradient(ellipse at 85% 50%,rgba(198,147,20,0.10) 0%,transparent 60%);
+    pointer-events:none;
   }
   .bg-num {
     position:absolute; right:-20px; top:-40px;
@@ -838,6 +839,13 @@
   .section-title { font-size:clamp(26px,3.8vw,50px) !important; letter-spacing:-0.02em !important; line-height:1.1 !important; }
   .section-eyebrow { font-size:10px !important; letter-spacing:4px !important; text-transform:uppercase !important; color:var(--persib-gold) !important; font-weight:700 !important; display:inline-block; border-bottom:2px solid var(--persib-gold); padding-bottom:3px; margin-bottom:14px !important; }
   .section-head { margin-bottom:40px !important; }
+
+  /* Mobile touch fix */
+  .trivia-card, .rival-card, .stat-card, th[data-sort], button, select, input,
+  .player-list li, .hattrick-item {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(0,51,160,0.08);
+  }
 
   .trivia-card::before { display:none !important; }
   .trivia-card:nth-child(3n+1) { border-top:3px solid var(--persib-gold) !important; }
