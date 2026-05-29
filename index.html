@@ -981,9 +981,62 @@
     .monument-value { font-size:68px; }
   }
 
+
+  /* ====== CLUB NAV BAR ====== */
+  .club-nav {
+    background: #0a0a14;
+    padding: 0 var(--page-pad, 24px);
+    display: flex; align-items: center; justify-content: space-between;
+    height: 44px; position: sticky; top: 0; z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .club-nav-brand {
+    font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+    color: rgba(255,255,255,0.4); font-weight: 600;
+  }
+  .club-nav-links { display: flex; gap: 8px; align-items: center; }
+  .club-nav-btn {
+    display: inline-flex; align-items: center; gap: 7px;
+    padding: 6px 14px; border-radius: 6px; font-size: 12px;
+    font-weight: 700; letter-spacing: 0.5px; text-decoration: none;
+    transition: all 0.18s; border: 1.5px solid transparent;
+    white-space: nowrap;
+  }
+  .club-nav-btn.active {
+    background: var(--persib-blue, #0033A0);
+    color: white; border-color: var(--persib-blue, #0033A0);
+    cursor: default; pointer-events: none;
+  }
+  .club-nav-btn.other {
+    background: rgba(228,5,33,0.12);
+    color: #ff6b6b; border-color: rgba(228,5,33,0.3);
+  }
+  .club-nav-btn.other:hover {
+    background: rgba(228,5,33,0.22);
+    border-color: rgba(228,5,33,0.6); color: #ff8f8f;
+    transform: translateY(-1px);
+  }
+  .club-nav-dot {
+    width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0;
+  }
 </style>
 </head>
 <body>
+
+<!-- Club navigation bar -->
+<nav class="club-nav">
+  <span class="club-nav-brand">Seri Statistik Sepak Bola Indonesia</span>
+  <div class="club-nav-links">
+    <a class="club-nav-btn active" href="#">
+      <span class="club-nav-dot" style="background:#C8A400"></span>
+      Persib Bandung
+    </a>
+    <a class="club-nav-btn other" href="https://aqfiazfan.github.io/persija-matchdays/" target="_blank">
+      <span class="club-nav-dot" style="background:#E40521"></span>
+      Persija Jakarta ↗
+    </a>
+  </div>
+</nav>
 
 <!-- Preload check untuk header image: kalau gagal, tambahkan kelas no-image ke header -->
 <img src="persib_header.png" alt="" style="display:none"
