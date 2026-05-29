@@ -887,14 +887,35 @@
     <div class="eyebrow">Compiled by Aqwam F Hanifan</div>
     <h1>Persib Bandung<br><em>Satu Abad Maung Kota Kembang</em></h1>
     <p class="hero-subtitle-wrap"><span class="hero-subtitle">Setiap pertandingan resmi, sejak Stedenwedstrijden zaman PSSI embrio di 1933 hingga musim Liga 1 yang masih bergulir hari ini. Dirakit dari arsip Rec.Sport.Soccer Statistics Foundation.</span></p>
-    <div class="hero-byline-wrap"><div class="hero-byline"><span>Lebih dari 1000</span> pertandingan · <span>1933 – 2026</span></div></div>
+    <div class="hero-byline-wrap"><div class="hero-byline"><span id="hero-match-count">1.275</span> pertandingan · <span>1933 – 2026</span></div></div>
   </div>
 </header>
+
+<!-- ARSIP BIRU monument -->
+<div class="hero-monument">
+  <div class="bg-num">1.275</div>
+  <div class="monument-inner">
+    <div class="monument-eyebrow">Persib Bandung &nbsp;&middot;&nbsp; 1933 &ndash; 2026</div>
+    <div class="monument-stat">
+      <div class="monument-value" id="monument-val">1.275</div>
+      <div class="monument-unit">Pertandingan Resmi</div>
+    </div>
+    <div class="monument-range">Dari Stedenwedstrijden 1933 hingga Liga 1 2025/26</div>
+    <div class="monument-bar"></div>
+    <div class="monument-tagline" id="lede-text">&mdash;</div>
+    <div class="monument-meta">
+      <div class="monument-mini"><div class="monument-mini-val" id="m-gf">1.941</div><div class="monument-mini-lbl">Gol dicetak</div></div>
+      <div class="monument-mini"><div class="monument-mini-val" id="m-w">617</div><div class="monument-mini-lbl">Kemenangan</div></div>
+      <div class="monument-mini"><div class="monument-mini-val">10</div><div class="monument-mini-lbl">Gelar nasional</div></div>
+      <div class="monument-mini"><div class="monument-mini-val">92</div><div class="monument-mini-lbl">Tahun berdiri</div></div>
+    </div>
+  </div>
+</div>
+<!-- end monument -->
 
 <main>
 
 <article class="editorial">
-  <!-- lede in monument -->
   <p class="has-dropcap" id="intro-p1">—</p>
   <p id="intro-p2">—</p>
 </article>
@@ -1107,8 +1128,19 @@ window.addEventListener('error', function(e){
   var hs = document.getElementById('hero-span');
   if (hs) hs.textContent = data.totals.span_first + ' – ' + data.totals.span_last;
 
-  // Editorial intro - split narrative
-  document.getElementById('lede-text').textContent = data.narrative.intro;
+  // Monument — update dynamic values
+  var lede = document.getElementById('lede-text');
+  if (lede) lede.textContent = data.narrative.intro;
+  var mval = document.getElementById('monument-val');
+  if (mval) mval.textContent = fmt(data.totals.matches);
+  var mgf = document.getElementById('m-gf');
+  if (mgf) mgf.textContent = fmt(data.totals.gf);
+  var mw = document.getElementById('m-w');
+  if (mw) mw.textContent = data.totals.W;
+  var hmc = document.getElementById('hero-match-count');
+  if (hmc) hmc.textContent = fmt(data.totals.matches);
+
+  // Editorial intro
   document.getElementById('intro-p1').textContent = data.narrative.totals;
   document.getElementById('intro-p2').textContent = data.narrative.intro_p2;
 
